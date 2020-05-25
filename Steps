@@ -1,23 +1,17 @@
-    1  cd /etc/yum.repos.d
-    2  wget http://yum.oracle.com/public-yum-ol7.repo
-    3  wget http://yum.oracle.com/RPM-GPG-KEY-oracle-ol7
-    4  rpm --import RPM-GPG-KEY-oracle-ol7
-    5  yum install -y yum-utils
-    6  yum-config-manager --enable ol7_oracle_instantclient
-    7  yum install oracle-instantclient18.3-basic
-    8  yum install oracle-instantclient18.3-devel
-    9  yum install oracle-instantclient18.3-jdbc
-   10  yum install oracle-instantclient18.3-sqlplus
-   11  yum list oracle-instantclient*
-   14  yum install gcc
-   16  php -i
-   17  clear
-   18  php -v
-   19  service httpd stop
-   20  pecl uninstall oci8
-   21  sudo yum install php-pear php-devel
-   22  pear download pecl/oci8
-   23  tar xvzf oci8-2.2.0.tgz
-   24  php -m
-       !pecl install oci8-2.0.12
-   24  cd oci8-2.2.0/ НАДО СМОТРЕТЬ ВЕРСИЮ PHP 
+cd /etc/yum.repos.d
+wget http://yum.oracle.com/public-yum-ol7.repo
+wget http://yum.oracle.com/RPM-GPG-KEY-oracle-ol7
+rpm --import RPM-GPG-KEY-oracle-ol7
+yum install -y yum-utils
+yum-config-manager --enable ol7_oracle_instantclient
+yum install oracle-instantclient18.3-basic
+yum install oracle-instantclient18.3-devel
+yum install oracle-instantclient18.3-jdbc
+yum install oracle-instantclient18.3-sqlplus
+yum list oracle-instantclient*
+yum install gcc
+service httpd stop
+pecl uninstall oci8
+sudo yum install php-pear php-devel
+pear download pecl/oci8-2.0.12
+pecl install oci8-2.0.12
